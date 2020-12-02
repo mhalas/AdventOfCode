@@ -15,6 +15,7 @@ namespace AdventOfCode.ConsoleApplication
 
             ApplicationContainer.Register<IReadListFromFile, ReadListFromFile>();
             ApplicationContainer.Register<IAdventTask, Day1_ReportRepair>(serviceKey: "2020-01");
+            ApplicationContainer.Register<IAdventTask, Day2_PasswordPhilosophy>(serviceKey: "2020-02");
         }
     }
 }

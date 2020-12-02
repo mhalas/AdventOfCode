@@ -4,7 +4,7 @@ using NSubstitute;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace AdventOfCode.Tests.Year2020
+namespace AdventOfCode.Tests
 {
     [TestFixture]
     public class ReportRepair
