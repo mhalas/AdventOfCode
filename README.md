@@ -9,4 +9,4 @@
 1. [Year 2020](https://github.com/mhalas/AdventOfCode/tree/main/src/AdventOfCode.Tasks/Year2020)
 
 ### Tests
-1. [All Tests](https://github.com/mhalas/AdventOfCode/tree/main/src/AdventOfCode.Tests)
+1. [Year 2020](https://github.com/mhalas/AdventOfCode/tree/main/src/AdventOfCode.Tests/Year2020)
