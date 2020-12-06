@@ -1,4 +1,6 @@
 ﻿using AdventOfCode.Shared.Contracts;
+using AdventOfCode.Shared.Results;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,10 +20,10 @@ namespace AdventOfCode.Tasks.Year2020
             var path = parameter.First();
             var data = _readListFromFile.ReadFile(path);
 
-            return GetCount(data).ToString();
+            return JsonConvert.SerializeObject(GetCount(data));
         }
 
-        private string GetCount(IEnumerable<string> data)
+        private PasswordPhilosophyResult GetCount(IEnumerable<string> data)
         {
             var dataPair = data.Select(x => x.Split(':'));
 
@@ -44,7 +46,7 @@ namespace AdventOfCode.Tasks.Year2020
                     resultCharactersPositionCount++;
             }
 
-            return $"Part one: {resultCharactersCount}, Part two: {resultCharactersPositionCount}";
+            return new PasswordPhilosophyResult(resultCharactersCount, resultCharactersPositionCount);
         }
     }
 }

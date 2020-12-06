@@ -6,7 +6,7 @@ using NSubstitute;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace AdventOfCode.Tests
+namespace AdventOfCode.Tests.Year2020
 {
     [TestFixture]
     public class BinaryBoarding

@@ -1,10 +1,12 @@
 ﻿using AdventOfCode.Shared.Contracts;
+using AdventOfCode.Shared.Results;
 using AdventOfCode.Tasks.Year2020;
+using Newtonsoft.Json;
 using NSubstitute;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace AdventOfCode.Tests
+namespace AdventOfCode.Tests.Year2020
 {
     [TestFixture]
     public class PasswordPhilosophy
@@ -18,9 +20,10 @@ namespace AdventOfCode.Tests
             readListFromFile.ReadFile("").Returns(numbers);
 
             var task = new Day2_PasswordPhilosophy(readListFromFile);
-            var result = task.Execute(new List<string> { "" });
 
-            Assert.AreEqual(result, "Part one: 2, Part two: 1");
+            var result = JsonConvert.DeserializeObject<PasswordPhilosophyResult>(task.Execute(new List<string> { "" }));
+            Assert.AreEqual(2, result.CharactersCount);
+            Assert.AreEqual(1, result.CharactersPositionCount);
         }
     }
 }
