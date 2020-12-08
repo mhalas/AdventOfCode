@@ -21,6 +21,7 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Day5_BinaryBoarding>(serviceKey: "2020-05");
             ApplicationContainer.Register<IAdventTask, Day6_CustomCustoms>(serviceKey: "2020-06");
             ApplicationContainer.Register<IAdventTask, Day7_HandyHaversacks>(serviceKey: "2020-07");
+            ApplicationContainer.Register<IAdventTask, Day8_HandheldHalting>(serviceKey: "2020-08");
         }
     }
 }
