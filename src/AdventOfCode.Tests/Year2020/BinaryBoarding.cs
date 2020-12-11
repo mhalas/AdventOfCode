@@ -23,7 +23,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day5_BinaryBoarding(readListFromFile);
 
-            var result = task.Execute(new List<string> { "" });
+            var result = task.Execute(new List<string> { "" }).Result;
 
             var dto = JsonConvert.DeserializeObject<BinaryBoardingResult>(result);
             Assert.AreEqual(row, dto.HighestBoarding.Row);
@@ -40,7 +40,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day5_BinaryBoarding(readListFromFile);
 
-            var result = task.Execute(new List<string> { "" });
+            var result = task.Execute(new List<string> { "" }).Result;
 
             var dto = JsonConvert.DeserializeObject<BinaryBoardingResult>(result);
             Assert.AreEqual("BBFFBBFRLL", dto.HighestBoarding.BinaryValue);

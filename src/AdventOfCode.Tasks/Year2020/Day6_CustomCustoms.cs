@@ -1,6 +1,7 @@
 ﻿using AdventOfCode.Shared.Contracts;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -13,7 +14,7 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> parameters)
+        public Task<string> Execute(IEnumerable<string> parameters)
         {
             var data = _readListFromFile.ReadFile(parameters.First());
             bool countOnlyTheSameAnswers = false;
@@ -24,7 +25,7 @@ namespace AdventOfCode.Tasks.Year2020
 
             var result = GetCountOfYesAnswers(data, countOnlyTheSameAnswers);
 
-            return result.ToString();
+            return Task.FromResult(result.ToString());
         }
 
         private int GetCountOfYesAnswers(IEnumerable<string> data, bool countOnlyTheSameAnswers)

@@ -1,6 +1,7 @@
 ﻿using AdventOfCode.Shared.Contracts;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -13,7 +14,7 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> parameters)
+        public Task<string> Execute(IEnumerable<string> parameters)
         {
             var data = _readListFromFile.ReadFile(parameters.First());
             var preamble = int.Parse(parameters.ElementAt(1));
@@ -27,9 +28,9 @@ namespace AdventOfCode.Tasks.Year2020
             var part1Value = GetInvalidValue(preamble, numbers, numbersToCheck);
 
             if (!part2)
-                return part1Value.ToString();
+                return Task.FromResult(part1Value.ToString());
             
-            return FindEncryptionWeakness(numbers, part1Value).ToString();
+            return  Task.FromResult(FindEncryptionWeakness(numbers, part1Value).ToString());
         }
 
         private double FindEncryptionWeakness(IEnumerable<double> numbers, double part1Value)

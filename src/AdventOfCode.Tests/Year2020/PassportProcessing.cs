@@ -34,10 +34,10 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day4_PassportProcessing(readListFromFile);
             
-            var result = task.Execute(new List<string> { "" });
+            var result = task.Execute(new List<string> { "" }).Result;
             Assert.AreEqual("2", result);
 
-            result = task.Execute(new List<string> { "", "false" });
+            result = task.Execute(new List<string> { "", "false" }).Result;
             Assert.AreEqual("2", result);
         }
 
@@ -65,7 +65,7 @@ namespace AdventOfCode.Tests.Year2020
             readListFromFile.ReadFile("").Returns(numbers);
 
             var task = new Day4_PassportProcessing(readListFromFile);
-            var result = task.Execute(new List<string> { "", "true" });
+            var result = task.Execute(new List<string> { "", "true" }).Result;
 
             Assert.AreEqual("0", result);
         }
@@ -93,7 +93,7 @@ namespace AdventOfCode.Tests.Year2020
             readListFromFile.ReadFile("").Returns(numbers);
 
             var task = new Day4_PassportProcessing(readListFromFile);
-            var result = task.Execute(new List<string> { "", "true" });
+            var result = task.Execute(new List<string> { "", "true" }).Result;
 
             Assert.AreEqual("4", result);
         }

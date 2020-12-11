@@ -35,10 +35,10 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day6_CustomCustoms(readListFromFile);
 
-            var result = task.Execute(new List<string> { "" });
+            var result = task.Execute(new List<string> { "" }).Result;
             Assert.AreEqual("11", result);
 
-            result = task.Execute(new List<string> { "", "False" });
+            result = task.Execute(new List<string> { "", "False" }).Result;
             Assert.AreEqual("11", result);
         }
 
@@ -68,7 +68,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day6_CustomCustoms(readListFromFile);
 
-            var result = task.Execute(new List<string> { "", "true" });
+            var result = task.Execute(new List<string> { "", "true" }).Result;
             Assert.AreEqual("6", result);
         }
     }

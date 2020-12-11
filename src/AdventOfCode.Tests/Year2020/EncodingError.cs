@@ -40,10 +40,10 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day9_EncodingError(readListFromFile);
 
-            var result = task.Execute(new List<string> { "", "5" });
+            var result = task.Execute(new List<string> { "", "5" }).Result;
             Assert.AreEqual("127", result);
 
-            result = task.Execute(new List<string> { "", "5", "false" });
+            result = task.Execute(new List<string> { "", "5", "false" }).Result;
             Assert.AreEqual("127", result);
         }
 
@@ -78,7 +78,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day9_EncodingError(readListFromFile);
 
-            var result = task.Execute(new List<string> { "", "5", "true" });
+            var result = task.Execute(new List<string> { "", "5", "true" }).Result;
             Assert.AreEqual("62", result);
         }
     }

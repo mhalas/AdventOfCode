@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -16,10 +17,10 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> parameters)
+        public Task<string> Execute(IEnumerable<string> parameters)
         {
             if (parameters.Count() < 2)
-                return "Error, please pass color as 4th argument.";
+                return Task.FromResult("Error, please pass color as 4th argument.");
             var searchingBagColor = parameters.ElementAt(1);
 
             var goDeeper = false;
@@ -30,9 +31,9 @@ namespace AdventOfCode.Tasks.Year2020
             var bagDefinitions = DeserializeBags(data);
 
             if (goDeeper)
-                return CalculateIndividualBags(bagDefinitions, searchingBagColor).ToString();
+                return Task.FromResult(CalculateIndividualBags(bagDefinitions, searchingBagColor).ToString());
 
-            return CalculateBags(bagDefinitions, searchingBagColor, new List<HandyHaversacksBagDto>(), 0).ToString();
+            return Task.FromResult(CalculateBags(bagDefinitions, searchingBagColor, new List<HandyHaversacksBagDto>(), 0).ToString());
         }
 
         private int CalculateIndividualBags(IEnumerable<HandyHaversacksBagDto> bagDefinitions, string searchingBagColor)

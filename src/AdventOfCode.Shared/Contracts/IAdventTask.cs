@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Shared.Contracts
 {
     public interface IAdventTask
     {
-        string Execute(IEnumerable<string> parameter);
+        Task<string> Execute(IEnumerable<string> parameter);
     }
 }

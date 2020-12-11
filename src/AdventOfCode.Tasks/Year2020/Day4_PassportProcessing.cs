@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -17,7 +18,7 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> parameters)
+        public Task<string> Execute(IEnumerable<string> parameters)
         {
             var checkEachField = false;
             var data = _readListFromFile.ReadFile(parameters.First());
@@ -28,7 +29,7 @@ namespace AdventOfCode.Tasks.Year2020
             var passports = GetPassports(data);
             var result = ValidatePassports(passports, checkEachField);
 
-            return result.ToString();
+            return Task.FromResult(result.ToString());
         }
 
         private int ValidatePassports(List<Dictionary<string, string>> passports, bool checkEachField)

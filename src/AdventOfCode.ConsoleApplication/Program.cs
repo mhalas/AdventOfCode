@@ -3,12 +3,13 @@ using DryIoc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.ConsoleApplication
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var arguments = args.ToList();
 
@@ -24,13 +25,13 @@ namespace AdventOfCode.ConsoleApplication
                 arguments = readLine.Split(" ").ToList();
             }
 
-            ExecuteTask(arguments);
+            await ExecuteTask(arguments);
 
             Console.WriteLine("Press any key...");
             Console.ReadKey();
         }
 
-        private static void ExecuteTask(List<string> args)
+        private static async Task ExecuteTask(List<string> args)
         {
             var serviceKey = $"{args[0]}-{args[1]}";
             args.RemoveRange(0, 2);
@@ -42,7 +43,10 @@ namespace AdventOfCode.ConsoleApplication
 
                 Console.WriteLine($"Executing task {task.GetType().Name}.");
 
-                var result = task.Execute(args);
+                Console.WriteLine($"Starts at {DateTime.Now}.");
+                var result = await task.Execute(args).ConfigureAwait(false);
+                Console.WriteLine($"Ends at {DateTime.Now}.");
+
                 Console.WriteLine($"\n-----\nResult of task: {result}.\n-----\n");
             }
         }

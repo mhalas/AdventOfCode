@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -17,7 +18,7 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> parameter)
+        public Task<string> Execute(IEnumerable<string> parameter)
         {
             var data = _readListFromFile.ReadFile(parameter.First());
 
@@ -28,7 +29,7 @@ namespace AdventOfCode.Tasks.Year2020
 
             var mySeatId = GetMySeatId(results);
 
-            return JsonConvert.SerializeObject(new BinaryBoardingResult(resultWithHighestSeatId, mySeatId));
+            return Task.FromResult(JsonConvert.SerializeObject(new BinaryBoardingResult(resultWithHighestSeatId, mySeatId)));
         }
 
         private int GetMySeatId(IOrderedEnumerable<BinaryBoardingDto> results)

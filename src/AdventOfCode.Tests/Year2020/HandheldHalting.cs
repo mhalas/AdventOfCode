@@ -32,7 +32,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day8_HandheldHalting(readListFromFile);
 
-            var result = task.Execute(new List<string> { "", "false" });
+            var result = task.Execute(new List<string> { "", "false" }).Result;
             Assert.AreEqual("5", result);
         }
 
@@ -79,7 +79,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day8_HandheldHalting(readListFromFile);
 
-            var result = task.Execute(new List<string> { "" });
+            var result = task.Execute(new List<string> { "" }).Result;
             Assert.AreEqual("6", result);
         }
 
@@ -104,7 +104,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day8_HandheldHalting(readListFromFile);
 
-            var result = task.Execute(new List<string> { "", "true" });
+            var result = task.Execute(new List<string> { "", "true" }).Result;
             Assert.AreEqual("8", result);
         }
     }

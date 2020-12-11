@@ -3,6 +3,7 @@ using AdventOfCode.Shared.Results;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -15,12 +16,12 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> parameter)
+        public Task<string> Execute(IEnumerable<string> parameter)
         {
             var path = parameter.First();
             var data = _readListFromFile.ReadFile(path);
 
-            return JsonConvert.SerializeObject(GetCount(data));
+            return Task.FromResult(JsonConvert.SerializeObject(GetCount(data)));
         }
 
         private PasswordPhilosophyResult GetCount(IEnumerable<string> data)

@@ -18,7 +18,7 @@ namespace AdventOfCode.Tests.Year2020
             readListFromFile.ReadFile("").Returns(numbers);
 
             var task = new Day1_ReportRepair(readListFromFile);
-            var result = task.Execute(new List<string> { "", "2" });
+            var result = task.Execute(new List<string> { "", "2" }).Result;
 
             Assert.AreEqual(result, "514579");
         }
@@ -32,7 +32,7 @@ namespace AdventOfCode.Tests.Year2020
             readListFromFile.ReadFile("").Returns(numbers);
 
             var task = new Day1_ReportRepair(readListFromFile);
-            var result = task.Execute(new List<string> { "", "3" });
+            var result = task.Execute(new List<string> { "", "3" }).Result;
 
             Assert.AreEqual(result, "241861950");
         }

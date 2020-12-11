@@ -30,10 +30,10 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day7_HandyHaversacks(readListFromFile);
 
-            var result = task.Execute(new List<string> { "", "shiny gold" });
+            var result = task.Execute(new List<string> { "", "shiny gold" }).Result;
             Assert.AreEqual("4", result);
 
-            result = task.Execute(new List<string> { "", "shiny gold", "false" });
+            result = task.Execute(new List<string> { "", "shiny gold", "false" }).Result;
             Assert.AreEqual("4", result);
         }
 
@@ -56,7 +56,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day7_HandyHaversacks(readListFromFile);
 
-            var result = task.Execute(new List<string> { "", "shiny gold", "true" });
+            var result = task.Execute(new List<string> { "", "shiny gold", "true" }).Result;
             Assert.AreEqual("126", result);
         }
 
@@ -77,7 +77,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day7_HandyHaversacks(readListFromFile);
 
-            var result = task.Execute(new List<string> { "", "shiny gold", "true" });
+            var result = task.Execute(new List<string> { "", "shiny gold", "true" }).Result;
             Assert.AreEqual("32", result);
         }
     }

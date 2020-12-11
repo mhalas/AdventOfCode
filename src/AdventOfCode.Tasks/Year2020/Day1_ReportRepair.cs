@@ -1,6 +1,7 @@
 ﻿using AdventOfCode.Shared.Contracts;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -15,7 +16,7 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> args)
+        public Task<string> Execute(IEnumerable<string> args)
         {
             var arguments = args.ToList();
             int countToSum = 2;
@@ -27,7 +28,7 @@ namespace AdventOfCode.Tasks.Year2020
                 countToSum = int.TryParse(arguments[1], out int parameter)? parameter: countToSum;
 
             var result = numbers.Where(n => GetAnotherNumber(numbers, n, 2, countToSum)).ToList();
-            return result.Aggregate((a, x) => a * x).ToString();
+            return Task.FromResult(result.Aggregate((a, x) => a * x).ToString());
         }
 
         private bool GetAnotherNumber(IEnumerable<int> numbers, int currentSum, int counter, int countToSum)

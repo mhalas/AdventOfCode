@@ -4,6 +4,7 @@ using AdventOfCode.Shared.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -16,7 +17,7 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> parameters)
+        public Task<string> Execute(IEnumerable<string> parameters)
         {
             var fixProgram = false;
             if (parameters.Count() == 2)
@@ -30,9 +31,9 @@ namespace AdventOfCode.Tasks.Year2020
                 .ToList();
 
             if (fixProgram)
-                return CountAccumulatorValueAfterFixingProgram(instructions)?.Value.ToString();
+                return Task.FromResult(CountAccumulatorValueAfterFixingProgram(instructions)?.Value.ToString());
 
-            return CountAccumulatorValue(instructions).Value.ToString();
+            return Task.FromResult(CountAccumulatorValue(instructions).Value.ToString());
         }
 
         private HandheldHaltingResult CountAccumulatorValueAfterFixingProgram(List<HandheldHaltingInstructionDto> instructions)

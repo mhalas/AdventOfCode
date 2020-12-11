@@ -29,7 +29,7 @@ namespace AdventOfCode.Tests.Year2020
             readListFromFile.ReadFile("").Returns(numbers);
 
             var task = new Day3_TobogganTrajectory(readListFromFile);
-            var result = task.Execute(new List<string> { "" });
+            var result = task.Execute(new List<string> { "" }).Result;
 
             Assert.AreEqual(result, "7");
         }
@@ -54,7 +54,7 @@ namespace AdventOfCode.Tests.Year2020
             readListFromFile.ReadFile("").Returns(numbers);
 
             var task = new Day3_TobogganTrajectory(readListFromFile);
-            var result = task.Execute(new List<string> { "", "1,1", "3,1", "5,1", "7,1", "1,2" });
+            var result = task.Execute(new List<string> { "", "1,1", "3,1", "5,1", "7,1", "1,2" }).Result;
 
             Assert.AreEqual(result, "336");
         }

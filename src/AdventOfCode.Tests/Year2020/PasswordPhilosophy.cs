@@ -21,7 +21,7 @@ namespace AdventOfCode.Tests.Year2020
 
             var task = new Day2_PasswordPhilosophy(readListFromFile);
 
-            var result = JsonConvert.DeserializeObject<PasswordPhilosophyResult>(task.Execute(new List<string> { "" }));
+            var result = JsonConvert.DeserializeObject<PasswordPhilosophyResult>(task.Execute(new List<string> { "" }).Result);
             Assert.AreEqual(2, result.CharactersCount);
             Assert.AreEqual(1, result.CharactersPositionCount);
         }

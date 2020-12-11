@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
@@ -18,7 +19,7 @@ namespace AdventOfCode.Tasks.Year2020
             _readListFromFile = readListFromFile;
         }
 
-        public string Execute(IEnumerable<string> parameter)
+        public Task<string> Execute(IEnumerable<string> parameter)
         {
             var data = _readListFromFile.ReadFile(parameter.First());
             var map = data.ToList();
@@ -34,10 +35,10 @@ namespace AdventOfCode.Tasks.Year2020
                 otherParameters.Select(x => x.Split(',')).ToList().ForEach((x) => slopes.Add(new KeyValuePair<int, int>(int.Parse(x[0]), int.Parse(x[1]))));
             }
 
-            return slopes
+            return Task.FromResult(slopes
                 .Select(x => GetTreesCount(map, x.Key, x.Value))
                 .Aggregate((x, y) => x * y)
-                .ToString();
+                .ToString());
         }
 
         private double GetTreesCount(List<string> map, int moveRightCount, int moveDownCount)
