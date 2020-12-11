@@ -1,7 +1,6 @@
 ﻿using AdventOfCode.Shared.Contracts;
 using AdventOfCode.Shared.Dto;
 using AdventOfCode.Shared.Results;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,7 +9,7 @@ namespace AdventOfCode.Tasks.Year2020
 {
     public class Day8_HandheldHalting : IAdventTask
     {
-        private IReadListFromFile _readListFromFile;
+        private readonly IReadListFromFile _readListFromFile;
 
         public Day8_HandheldHalting(IReadListFromFile readListFromFile)
         {

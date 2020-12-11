@@ -7,7 +7,7 @@ namespace AdventOfCode.Tasks.Year2020
 {
     public class Day6_CustomCustoms: IAdventTask
     {
-        private IReadListFromFile _readListFromFile;
+        private readonly IReadListFromFile _readListFromFile;
 
         public Day6_CustomCustoms(IReadListFromFile readListFromFile)
         {

@@ -7,7 +7,7 @@ namespace AdventOfCode.Tasks.Year2020
 {
     public class Day9_EncodingError : IAdventTask
     {
-        private IReadListFromFile _readListFromFile;
+        private readonly IReadListFromFile _readListFromFile;
 
         public Day9_EncodingError(IReadListFromFile readListFromFile)
         {

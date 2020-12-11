@@ -3,14 +3,13 @@ using AdventOfCode.Shared.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AdventOfCode.Tasks.Year2020
 {
     public class Day7_HandyHaversacks : IAdventTask
     {
-        private IReadListFromFile _readListFromFile;
+        private readonly IReadListFromFile _readListFromFile;
 
         public Day7_HandyHaversacks(IReadListFromFile readListFromFile)
         {

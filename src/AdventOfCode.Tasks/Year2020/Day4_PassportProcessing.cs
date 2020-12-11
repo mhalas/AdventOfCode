@@ -8,10 +8,10 @@ namespace AdventOfCode.Tasks.Year2020
 {
     public class Day4_PassportProcessing: IAdventTask
     {
-        private IEnumerable<string> _validEyeColors = new List<string>() { "amb", "blu", "brn", "gry", "grn", "hzl", "oth" };
-        private string _hairColorRegex = "#([0-9a-f]{6})";
+        private readonly IEnumerable<string> _validEyeColors = new List<string>() { "amb", "blu", "brn", "gry", "grn", "hzl", "oth" };
+        private readonly string _hairColorRegex = "#([0-9a-f]{6})";
 
-        private IReadListFromFile _readListFromFile;
+        private readonly IReadListFromFile _readListFromFile;
 
         public Day4_PassportProcessing(IReadListFromFile readListFromFile)
         {

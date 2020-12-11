@@ -11,7 +11,7 @@ namespace AdventOfCode.Tasks.Year2020
 {
     public class Day5_BinaryBoarding : IAdventTask
     {
-        private IReadListFromFile _readListFromFile;
+        private readonly IReadListFromFile _readListFromFile;
 
         public Day5_BinaryBoarding(IReadListFromFile readListFromFile)
         {

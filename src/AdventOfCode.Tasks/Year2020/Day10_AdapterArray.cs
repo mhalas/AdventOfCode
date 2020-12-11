@@ -8,19 +8,55 @@ namespace AdventOfCode.Tasks.Year2020
     public class Day10_AdapterArray: IAdventTask
     {
         private readonly int MaxTasks = 4;
-        private IReadListFromFile _readListFromFile;
+        private readonly IReadListFromFile _readListFromFile;
 
         public Day10_AdapterArray(IReadListFromFile readListFromFile)
         {
             _readListFromFile = readListFromFile;
         }
 
-        public async Task<string> Execute(IEnumerable<string> parameters)
+        public Task<string> Execute(IEnumerable<string> parameters)
         {
             var data = _readListFromFile.ReadFile(parameters.First());
-            var adapters = data.Select(x => int.Parse(x)).OrderBy(x => x);
+            var adapters = data.Select(x => int.Parse(x)).OrderBy(x => x).AsEnumerable();
 
-            return GetDifferencesMultiply(adapters);
+            if (parameters.Count() == 2 && bool.Parse(parameters.ElementAt(1)) == true)
+            {
+                var memo = new Dictionary<int, IEnumerable<int>>();
+                return Task.FromResult(GetNumberOfDistinctWays(ref adapters, ref memo, new List<int>() { 0 }).ToString());
+            }
+
+            return Task.FromResult(GetDifferencesMultiply(adapters));
+        }
+
+        private int GetNumberOfDistinctWays(ref IEnumerable<int> adapters, ref Dictionary<int, IEnumerable<int>> memo, IEnumerable<int> currentNumbers)
+        {
+            var result = 0;
+            foreach (var n in currentNumbers)
+            {
+                if (memo.ContainsKey(n))
+                {
+                    result += GetNumberOfDistinctWays(ref adapters, ref memo, memo[n]);
+                    continue;
+                }
+
+                var validAdapters = adapters.Where(x => x > n && x <= n + 3);
+                if (!validAdapters.Any())
+                {
+                    result++;
+                    break;
+                }
+
+                if (validAdapters.Count() > 1)
+                {
+                    memo.Add(n, validAdapters);
+                    break;
+                }
+
+                validAdapters = adapters.Where(x => x > n && x <= n + 3);
+            }
+
+            return result;
         }
 
         private string GetDifferencesMultiply(IEnumerable<int> adapters)
