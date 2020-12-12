@@ -24,6 +24,7 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Day8_HandheldHalting>(serviceKey: "2020-08");
             ApplicationContainer.Register<IAdventTask, Day9_EncodingError>(serviceKey: "2020-09");
             ApplicationContainer.Register<IAdventTask, Day10_AdapterArray>(serviceKey: "2020-10");
+            ApplicationContainer.Register<IAdventTask, Day11_SeatingSystem>(serviceKey: "2020-11");
         }
     }
 }

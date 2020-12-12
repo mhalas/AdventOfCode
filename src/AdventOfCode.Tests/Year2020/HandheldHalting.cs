@@ -2,9 +2,7 @@
 using AdventOfCode.Tasks.Year2020;
 using NSubstitute;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AdventOfCode.Tests.Year2020
 {
