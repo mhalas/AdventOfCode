@@ -81,13 +81,13 @@ namespace AdventOfCode.Tasks.Year2020
             {
                 if (x >= 0 && x != lastRound[y].Length - 1)
                 {
-                    result.Add(lastRound[y].Substring(x + 1).FirstOrDefault(c => c != Floor));
+                    result.Add(GetElementByCross(lastRound, x, y, 1, 0));
                     result.Add(GetElementByCross(lastRound, x, y, 1, 1));
                 }
 
                 if (x <= lastRound[y].Length - 1 && x != 0)
                 {
-                    result.Add(lastRound[y].Substring(0, x - 1).LastOrDefault(c => c != Floor));
+                    result.Add(GetElementByCross(lastRound, x, y, -1, 0));
                     result.Add(GetElementByCross(lastRound, x, y, -1, 1));
                 }
 
@@ -99,7 +99,7 @@ namespace AdventOfCode.Tasks.Year2020
                 if (x >= 0 && x != lastRound[y].Length - 1)
                 {
                     if (!(y >= 0 && y != lastRound.Count - 1))
-                        result.Add(lastRound[y].Substring(x + 1).FirstOrDefault(c => c != Floor));
+                        result.Add(GetElementByCross(lastRound, x, y, 1, 0));
 
                     result.Add(GetElementByCross(lastRound, x, y, 1, -1));
                 }
@@ -107,7 +107,7 @@ namespace AdventOfCode.Tasks.Year2020
                 if (x <= lastRound[y].Length - 1 && x != 0)
                 {
                     if (!(y >= 0 && y != lastRound.Count - 1))
-                        result.Add(lastRound[y].Substring(0, x - 1).LastOrDefault(c => c != Floor));
+                        result.Add(GetElementByCross(lastRound, x, y, -1, 0));
 
                     result.Add(GetElementByCross(lastRound, x, y, -1, -1));
                 }

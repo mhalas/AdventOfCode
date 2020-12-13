@@ -60,5 +60,27 @@ namespace AdventOfCode.Tests.Year2020
             var result = task.Execute(new List<string> { "", "5", "true" }).Result;
             Assert.AreEqual("26", result);
         }
+
+        [Test]
+        public void AdapterArray_CheckTemp()
+        {
+            IEnumerable<string> inputs = new List<string>()
+            {
+                ".##.##.",
+                "#.#.#.#",
+                "##...##",
+                "...L...",
+                "##...##",
+                "#.#.#.#",
+                ".##.##."
+            };
+            var readListFromFile = Substitute.For<IReadListFromFile>();
+            readListFromFile.ReadFile("").Returns(inputs);
+
+            var task = new Day11_SeatingSystem(readListFromFile);
+
+            var result = task.Execute(new List<string> { "", "5", "true" }).Result;
+            Assert.AreEqual("9", result);
+        }
     }
 }
