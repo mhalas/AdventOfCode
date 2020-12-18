@@ -1,4 +1,5 @@
 ﻿using AdventOfCode.Shared.Contracts;
+using NLog;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +8,8 @@ namespace AdventOfCode.Tasks.Year2020
 {
     public class Day10_AdapterArray: IAdventTask
     {
+        private readonly ILogger Logger = LogManager.GetCurrentClassLogger();
+
         private readonly int MaxTasks = 4;
         private readonly IReadListFromFile _readListFromFile;
 
@@ -22,21 +25,21 @@ namespace AdventOfCode.Tasks.Year2020
 
             if (parameters.Count() == 2 && bool.Parse(parameters.ElementAt(1)) == true)
             {
-                var memo = new Dictionary<int, IEnumerable<int>>();
-                return Task.FromResult(GetNumberOfDistinctWays(ref adapters, ref memo, new List<int>() { 0 }).ToString());
+                var memo = new Dictionary<int, long>();
+                return Task.FromResult(GetNumberOfDistinctWays(ref adapters, ref memo, new List<int> { 0 }).ToString());
             }
 
             return Task.FromResult(GetDifferencesMultiply(adapters));
         }
 
-        private int GetNumberOfDistinctWays(ref IEnumerable<int> adapters, ref Dictionary<int, IEnumerable<int>> memo, IEnumerable<int> currentNumbers)
+        private long GetNumberOfDistinctWays(ref IEnumerable<int> adapters, ref Dictionary<int, long> memo, IEnumerable<int> currentNumbers)
         {
-            var result = 0;
+            var result = 0l;
             foreach (var n in currentNumbers)
             {
                 if (memo.ContainsKey(n))
                 {
-                    result += GetNumberOfDistinctWays(ref adapters, ref memo, memo[n]);
+                    result += memo[n];
                     continue;
                 }
 
@@ -44,16 +47,12 @@ namespace AdventOfCode.Tasks.Year2020
                 if (!validAdapters.Any())
                 {
                     result++;
-                    break;
+                    continue;
                 }
 
-                if (validAdapters.Count() > 1)
-                {
-                    memo.Add(n, validAdapters);
-                    break;
-                }
-
-                validAdapters = adapters.Where(x => x > n && x <= n + 3);
+                var getWaysOfCurrentNumber = GetNumberOfDistinctWays(ref adapters, ref memo, validAdapters);
+                memo.Add(n, getWaysOfCurrentNumber);
+                result += getWaysOfCurrentNumber;
             }
 
             return result;
