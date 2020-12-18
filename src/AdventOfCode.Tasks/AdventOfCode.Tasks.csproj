@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="DeepCloner" Version="0.10.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NLog" Version="4.7.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +55,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="ExternalFiles\2020-13.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ExternalFiles\2020-14.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

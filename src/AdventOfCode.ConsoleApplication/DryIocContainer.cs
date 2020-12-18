@@ -27,6 +27,7 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Day11_SeatingSystem>(serviceKey: "2020-11");
             ApplicationContainer.Register<IAdventTask, Day12_RainRisk>(serviceKey: "2020-12");
             ApplicationContainer.Register<IAdventTask, Day13_ShuttleSearch>(serviceKey: "2020-13");
+            ApplicationContainer.Register<IAdventTask, Day14_DockingData>(serviceKey: "2020-14");
         }
     }
 }

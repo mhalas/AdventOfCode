@@ -45,9 +45,9 @@ namespace AdventOfCode.ConsoleApplication
 
                 Console.WriteLine($"Starts at {DateTime.Now}.");
                 var result = await task.Execute(args).ConfigureAwait(false);
+                Console.WriteLine($"\n-----\nResult of task: {result}.\n-----\n");
                 Console.WriteLine($"Ends at {DateTime.Now}.");
 
-                Console.WriteLine($"\n-----\nResult of task: {result}.\n-----\n");
             }
         }
     }
