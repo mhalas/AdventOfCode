@@ -8,9 +8,6 @@ namespace AdventOfCode.Tasks.Year2020
 {
     public class Day10_AdapterArray: IAdventTask
     {
-        private readonly ILogger Logger = LogManager.GetCurrentClassLogger();
-
-        private readonly int MaxTasks = 4;
         private readonly IReadListFromFile _readListFromFile;
 
         public Day10_AdapterArray(IReadListFromFile readListFromFile)
@@ -34,7 +31,7 @@ namespace AdventOfCode.Tasks.Year2020
 
         private long GetNumberOfDistinctWays(ref IEnumerable<int> adapters, ref Dictionary<int, long> memo, IEnumerable<int> currentNumbers)
         {
-            var result = 0l;
+            var result = (long)0;
             foreach (var n in currentNumbers)
             {
                 if (memo.ContainsKey(n))

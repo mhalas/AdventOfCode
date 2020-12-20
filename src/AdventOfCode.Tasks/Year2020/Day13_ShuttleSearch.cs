@@ -46,20 +46,6 @@ namespace AdventOfCode.Tasks.Year2020
                 .Split(new string[] { "," }, StringSplitOptions.None)
                 .Select(x => int.TryParse(x, out int value)? (int?)value: null)
                 .ToList();
-
-            //var  values = new List<int>();
-            //for (int i = 0; i < buses.Count(); i++)
-            //{
-            //    if (!buses[i].HasValue)
-            //        continue;
-
-            //    values.Add(buses[i].Value - i);
-            //}
-
-            //var leastCommonDivisor = GetLeastCommonDivisor(values);
-
-            //return leastCommonDivisor;
-
             return 0;
         }
     }

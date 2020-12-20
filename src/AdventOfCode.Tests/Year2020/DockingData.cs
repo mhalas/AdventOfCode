@@ -28,7 +28,7 @@ namespace AdventOfCode.Tests.Year2020
             Assert.AreEqual("165", result);
         }
 
-        [Test]
+        [Ignore("Not implemented Part 2")]
         public void DockingData_Part2()
         {
             IEnumerable<string> inputs = new List<string>()
@@ -41,8 +41,7 @@ namespace AdventOfCode.Tests.Year2020
             var task = new Day14_DockingData(readListFromFile);
 
             var result = task.Execute(new List<string> { "", "true" }).Result;
-            Assert.AreEqual("", result);
-            Assert.Fail();
+            Assert.AreEqual("208", result);
         }
     }
 }
