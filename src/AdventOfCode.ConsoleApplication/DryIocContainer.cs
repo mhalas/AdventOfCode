@@ -33,6 +33,7 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Day16_TicketTranslation>(serviceKey: "2020-16");
 
             ApplicationContainer.Register<IAdventTask, Day1_SonarSweep>(serviceKey: "2021-01");
+            ApplicationContainer.Register<IAdventTask, Day2_Dive>(serviceKey: "2021-02");
         }
     }
 }

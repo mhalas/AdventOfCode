@@ -10,7 +10,7 @@ namespace AdventOfCode.Tests.Year2021
     public class SonarSweep
     {
         [Test]
-        public void CheckIncreasedValues()
+        public void Part1_CheckIncreasedValues()
         {
             IEnumerable<string> numbers = new List<string>() { "199", 
                 "200",
@@ -36,7 +36,7 @@ namespace AdventOfCode.Tests.Year2021
         }
 
         [Test]
-        public void CheckIncreasedValuesWithGroups()
+        public void Part2_CheckIncreasedValuesWithGroups()
         {
             IEnumerable<string> numbers = new List<string>() { "199",
                 "200",
