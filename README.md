@@ -1,3 +1,5 @@
+[![.NET Core](https://github.com/mhalas/AdventOfCode/actions/workflows/dotnet-core.yml/badge.svg?branch=main)](https://github.com/mhalas/AdventOfCode/actions/workflows/dotnet-core.yml)
+
 # Advent of Code
 
 ## More info about project:
@@ -7,9 +9,12 @@
 
 ### Advent of Code Editions:
 1. [2020](https://adventofcode.com/2020)
+2. [2021](https://adventofcode.com/2021)
 
 ### Events:
 1. [2020](https://github.com/mhalas/AdventOfCode/tree/main/src/AdventOfCode.Tasks/Year2020)
+2. [2021](https://github.com/mhalas/AdventOfCode/tree/main/src/AdventOfCode.Tasks/Year2021)
 
 ### Tests:
 1. [2020](https://github.com/mhalas/AdventOfCode/tree/main/src/AdventOfCode.Tests/Year2020)
+2. [2021](https://github.com/mhalas/AdventOfCode/tree/main/src/AdventOfCode.Tests/Year2021)
