@@ -1,6 +1,7 @@
 ﻿using AdventOfCode.Shared.Common;
 using AdventOfCode.Shared.Contracts;
 using AdventOfCode.Tasks.Year2020;
+using AdventOfCode.Tasks.Year2021;
 using DryIoc;
 
 namespace AdventOfCode.ConsoleApplication
@@ -30,6 +31,8 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Day14_DockingData>(serviceKey: "2020-14");
             ApplicationContainer.Register<IAdventTask, Day15_RambunctiousRecitation>(serviceKey: "2020-15");
             ApplicationContainer.Register<IAdventTask, Day16_TicketTranslation>(serviceKey: "2020-16");
+
+            ApplicationContainer.Register<IAdventTask, Day1_SonarSweep>(serviceKey: "2021-01");
         }
     }
 }
