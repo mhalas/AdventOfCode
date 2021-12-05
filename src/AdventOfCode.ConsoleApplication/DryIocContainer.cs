@@ -34,6 +34,7 @@ namespace AdventOfCode.ConsoleApplication
 
             ApplicationContainer.Register<IAdventTask, Day1_SonarSweep>(serviceKey: "2021-01");
             ApplicationContainer.Register<IAdventTask, Day2_Dive>(serviceKey: "2021-02");
+            ApplicationContainer.Register<IAdventTask, Day3_BinaryDiagnostic>(serviceKey: "2021-03");
             ApplicationContainer.Register<IAdventTask, Day4_GiantSquid>(serviceKey: "2021-04");
         }
     }
