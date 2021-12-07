@@ -10,8 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DryIoc" Version="4.5.1" />
-    <PackageReference Include="NLog" Version="4.7.6" />
+    <PackageReference Include="DryIoc" Version="4.8.4" />
+    <PackageReference Include="NLog" Version="4.7.13" />
   </ItemGroup>
 
   <ItemGroup>
