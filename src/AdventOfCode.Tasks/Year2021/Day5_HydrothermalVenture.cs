@@ -44,7 +44,7 @@ namespace AdventOfCode.Tasks.Year2021
             var result = coordsPositions
                 .Where(x=> x.Value > 1)
                 .Count();
-
+            
             return Task.FromResult(result.ToString());
         }
 
