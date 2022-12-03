@@ -2,7 +2,7 @@
   "profiles": {
     "AdventOfCode.ConsoleApplication": {
       "commandName": "Project",
-      "commandLineArgs": "2021 05 ./ExternalFiles/2021-05.txt true"
+      "commandLineArgs": "2022 01 ./ExternalFiles/2022-01.txt 3"
     }
   }
 }
