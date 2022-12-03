@@ -19,4 +19,8 @@
     <ProjectReference Include="..\AdventOfCode.Tasks\AdventOfCode.Tasks.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Year2022\" />
+  </ItemGroup>
+
 </Project>

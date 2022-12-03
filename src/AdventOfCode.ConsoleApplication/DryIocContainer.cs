@@ -2,6 +2,7 @@
 using AdventOfCode.Shared.Contracts;
 using AdventOfCode.Tasks.Year2020;
 using AdventOfCode.Tasks.Year2021;
+using AdventOfCode.Tasks.Year2022;
 using DryIoc;
 
 namespace AdventOfCode.ConsoleApplication
@@ -37,6 +38,8 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Day3_BinaryDiagnostic>(serviceKey: "2021-03");
             ApplicationContainer.Register<IAdventTask, Day4_GiantSquid>(serviceKey: "2021-04");
             ApplicationContainer.Register<IAdventTask, Day5_HydrothermalVenture>(serviceKey: "2021-05");
+
+            ApplicationContainer.Register<IAdventTask, Day01_CalorieCounting>(serviceKey: "2022-01");
         }
     }
 }
