@@ -16,15 +16,15 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer = new Container();
 
             ApplicationContainer.Register<IReadListFromFile, ReadListFromFile>();
-            ApplicationContainer.Register<IAdventTask, Day1_ReportRepair>(serviceKey: "2020-01");
-            ApplicationContainer.Register<IAdventTask, Day2_PasswordPhilosophy>(serviceKey: "2020-02");
-            ApplicationContainer.Register<IAdventTask, Day3_TobogganTrajectory>(serviceKey: "2020-03");
-            ApplicationContainer.Register<IAdventTask, Day4_PassportProcessing>(serviceKey: "2020-04");
-            ApplicationContainer.Register<IAdventTask, Day5_BinaryBoarding>(serviceKey: "2020-05");
-            ApplicationContainer.Register<IAdventTask, Day6_CustomCustoms>(serviceKey: "2020-06");
-            ApplicationContainer.Register<IAdventTask, Day7_HandyHaversacks>(serviceKey: "2020-07");
-            ApplicationContainer.Register<IAdventTask, Day8_HandheldHalting>(serviceKey: "2020-08");
-            ApplicationContainer.Register<IAdventTask, Day9_EncodingError>(serviceKey: "2020-09");
+            ApplicationContainer.Register<IAdventTask, Day01_ReportRepair>(serviceKey: "2020-01");
+            ApplicationContainer.Register<IAdventTask, Day02_PasswordPhilosophy>(serviceKey: "2020-02");
+            ApplicationContainer.Register<IAdventTask, Day03_TobogganTrajectory>(serviceKey: "2020-03");
+            ApplicationContainer.Register<IAdventTask, Day04_PassportProcessing>(serviceKey: "2020-04");
+            ApplicationContainer.Register<IAdventTask, Day05_BinaryBoarding>(serviceKey: "2020-05");
+            ApplicationContainer.Register<IAdventTask, Day06_CustomCustoms>(serviceKey: "2020-06");
+            ApplicationContainer.Register<IAdventTask, Day07_HandyHaversacks>(serviceKey: "2020-07");
+            ApplicationContainer.Register<IAdventTask, Day08_HandheldHalting>(serviceKey: "2020-08");
+            ApplicationContainer.Register<IAdventTask, Day09_EncodingError>(serviceKey: "2020-09");
             ApplicationContainer.Register<IAdventTask, Day10_AdapterArray>(serviceKey: "2020-10");
             ApplicationContainer.Register<IAdventTask, Day11_SeatingSystem>(serviceKey: "2020-11");
             ApplicationContainer.Register<IAdventTask, Day12_RainRisk>(serviceKey: "2020-12");
@@ -34,10 +34,10 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Day16_TicketTranslation>(serviceKey: "2020-16");
 
             ApplicationContainer.Register<IAdventTask, Day1_SonarSweep>(serviceKey: "2021-01");
-            ApplicationContainer.Register<IAdventTask, Day2_Dive>(serviceKey: "2021-02");
-            ApplicationContainer.Register<IAdventTask, Day3_BinaryDiagnostic>(serviceKey: "2021-03");
-            ApplicationContainer.Register<IAdventTask, Day4_GiantSquid>(serviceKey: "2021-04");
-            ApplicationContainer.Register<IAdventTask, Day5_HydrothermalVenture>(serviceKey: "2021-05");
+            ApplicationContainer.Register<IAdventTask, Day02_Dive>(serviceKey: "2021-02");
+            ApplicationContainer.Register<IAdventTask, Day03_BinaryDiagnostic>(serviceKey: "2021-03");
+            ApplicationContainer.Register<IAdventTask, Day04_GiantSquid>(serviceKey: "2021-04");
+            ApplicationContainer.Register<IAdventTask, Day05_HydrothermalVenture>(serviceKey: "2021-05");
 
             ApplicationContainer.Register<IAdventTask, Day01_CalorieCounting>(serviceKey: "2022-01");
         }

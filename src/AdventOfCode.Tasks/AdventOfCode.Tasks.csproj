@@ -15,70 +15,70 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="ExternalFiles\2020-01.txt">
+    <None Update="ExternalFiles\Year2020\2020-01.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-02.txt">
+    <None Update="ExternalFiles\Year2020\2020-02.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-03.txt">
+    <None Update="ExternalFiles\Year2020\2020-03.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-04.txt">
+    <None Update="ExternalFiles\Year2020\2020-04.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-05.txt">
+    <None Update="ExternalFiles\Year2020\2020-05.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-06.txt">
+    <None Update="ExternalFiles\Year2020\2020-06.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-07.txt">
+    <None Update="ExternalFiles\Year2020\2020-07.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-08.txt">
+    <None Update="ExternalFiles\Year2020\2020-08.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-09.txt">
+    <None Update="ExternalFiles\Year2020\2020-09.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-10.txt">
+    <None Update="ExternalFiles\Year2020\2020-10.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-11.txt">
+    <None Update="ExternalFiles\Year2020\2020-11.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="ExternalFiles\2020-12v2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-12.txt">
+    <None Update="ExternalFiles\Year2020\2020-12.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-13.txt">
+    <None Update="ExternalFiles\Year2020\2020-13.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-14.txt">
+    <None Update="ExternalFiles\Year2020\2020-14.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2020-16.txt">
+    <None Update="ExternalFiles\Year2020\2020-16.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2021-01.txt">
+    <None Update="ExternalFiles\Year2021\2021-01.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2021-03.txt">
+    <None Update="ExternalFiles\Year2021\2021-03.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2021-05.txt">
+    <None Update="ExternalFiles\Year2021\2021-05.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2021-04.txt">
+    <None Update="ExternalFiles\Year2021\2021-04.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2021-02.txt">
+    <None Update="ExternalFiles\Year2021\2021-02.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ExternalFiles\2022-01.txt">
+    <None Update="ExternalFiles\Year2022\2022-01.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
