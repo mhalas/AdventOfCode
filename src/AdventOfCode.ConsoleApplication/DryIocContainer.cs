@@ -40,6 +40,7 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Day05_HydrothermalVenture>(serviceKey: "2021-05");
 
             ApplicationContainer.Register<IAdventTask, Day01_CalorieCounting>(serviceKey: "2022-01");
+            ApplicationContainer.Register<IAdventTask, Day02_RockPaperScissors>(serviceKey: "2022-02");
         }
     }
 }
