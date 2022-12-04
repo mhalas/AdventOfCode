@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -17,10 +17,6 @@
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Shared\AdventOfCode.Shared.csproj" />
     <ProjectReference Include="..\AdventOfCode.Tasks\AdventOfCode.Tasks.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Year2022\" />
   </ItemGroup>
 
 </Project>
