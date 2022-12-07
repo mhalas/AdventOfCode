@@ -41,6 +41,8 @@ namespace AdventOfCode.ConsoleApplication
 
             ApplicationContainer.Register<IAdventTask, Day01_CalorieCounting>(serviceKey: "2022-01");
             ApplicationContainer.Register<IAdventTask, Day02_RockPaperScissors>(serviceKey: "2022-02");
+            ApplicationContainer.Register<IAdventTask, Day03_RucksackReorganization>(serviceKey: "2022-03");
+            ApplicationContainer.Register<IAdventTask, Day04_CampCleanup>(serviceKey: "2022-04");
         }
     }
 }
