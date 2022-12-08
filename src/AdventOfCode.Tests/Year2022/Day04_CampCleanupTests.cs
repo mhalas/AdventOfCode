@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace AdventOfCode.Tests.Year2022
 {
     [TestFixture]
-    public class Day04_CampCleanupTestsTestsTests
+    public class Day04_CampCleanupTests
     {
         [Test]
         public void Day04_CampCleanup_Part1()

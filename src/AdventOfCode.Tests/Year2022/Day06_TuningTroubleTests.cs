@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace AdventOfCode.Tests.Year2022
 {
     [TestFixture]
-    public class Day06_TuningTroubleTestsTestsTests
+    public class Day06_TuningTroubleTests
     {
         [TestCase("mjqjpqmgbljsphdztnvjfqwrcgsmlb", 7)]
         [TestCase("bvwbjplbgvbhsrlpgdmjqwftvncz", 5)]
