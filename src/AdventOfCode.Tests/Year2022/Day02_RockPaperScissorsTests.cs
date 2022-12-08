@@ -10,7 +10,7 @@ namespace AdventOfCode.Tests.Year2022
     public class Day02_RockPaperScissorsTests
     {
         [Test]
-        public void Day02_RockPaperScissorsTests_Part1()
+        public void Day02_RockPaperScissors_Part1()
         {
             IEnumerable<string> inputs = new List<string>()
             {
@@ -28,7 +28,7 @@ namespace AdventOfCode.Tests.Year2022
         }
 
         [Test]
-        public void Day02_RockPaperScissorsTests_Part2()
+        public void Day02_RockPaperScissors_Part2()
         {
             IEnumerable<string> inputs = new List<string>()
             {

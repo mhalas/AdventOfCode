@@ -10,7 +10,7 @@ namespace AdventOfCode.Tests.Year2022
     public class Day03_RucksackReorganizationTests
     {
         [Test]
-        public void Day03_RucksackReorganizationTests_Part1()
+        public void Day03_RucksackReorganization_Part1()
         {
             IEnumerable<string> inputs = new List<string>()
             {
@@ -31,7 +31,7 @@ namespace AdventOfCode.Tests.Year2022
         }
 
         [Test]
-        public void Day03_RucksackReorganizationTests_Part2()
+        public void Day03_RucksackReorganization_Part2()
         {
             IEnumerable<string> inputs = new List<string>()
             {

@@ -11,7 +11,7 @@ namespace AdventOfCode.Tests.Year2022
     {
         [TestCase("1", "24000")]
         [TestCase("3", "45000")]
-        public void Day01_CalorieCountingTests_Part1(string takeTopElfs, string expectedResult)
+        public void Day01_CalorieCounting(string takeTopElfs, string expectedResult)
         {
             IEnumerable<string> inputs = new List<string>()
             {

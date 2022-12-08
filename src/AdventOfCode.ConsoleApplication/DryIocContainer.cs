@@ -41,6 +41,7 @@ namespace AdventOfCode.ConsoleApplication
             ApplicationContainer.Register<IAdventTask, Tasks.Year2022.Day03_RucksackReorganization>(serviceKey: "2022-03");
             ApplicationContainer.Register<IAdventTask, Tasks.Year2022.Day04_CampCleanup>(serviceKey: "2022-04");
             ApplicationContainer.Register<IAdventTask, Tasks.Year2022.Day05_SupplyStacks> (serviceKey: "2022-05");
+            ApplicationContainer.Register<IAdventTask, Tasks.Year2022.Day06_TuningTrouble>(serviceKey: "2022-06");
         }
     }
 }
