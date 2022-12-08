@@ -10,7 +10,7 @@ namespace AdventOfCode.Tests.Year2022
     public class Day04_CampCleanupTestsTestsTests
     {
         [Test]
-        public void Day04_CampCleanupTestsTests_Part1()
+        public void Day04_CampCleanup_Part1()
         {
             IEnumerable<string> inputs = new List<string>()
             {
@@ -31,7 +31,7 @@ namespace AdventOfCode.Tests.Year2022
         }
 
         [Test]
-        public void Day04_CampCleanupTestsTests_Part2()
+        public void Day04_CampCleanup_Part2()
         {
             IEnumerable<string> inputs = new List<string>()
             {

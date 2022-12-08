@@ -2,6 +2,7 @@
 using DryIoc;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -43,10 +44,16 @@ namespace AdventOfCode.ConsoleApplication
 
                 Console.WriteLine($"Executing task {task.GetType().Name}.");
 
-                Console.WriteLine($"Starts at {DateTime.Now}.");
+                var stopwatch = new Stopwatch();
+
+                Console.WriteLine($"Starts at: {DateTime.Now}.");
+                stopwatch.Start();
                 var result = await task.Execute(args).ConfigureAwait(false);
+                stopwatch.Stop();
                 Console.WriteLine($"\n-----\nResult of task: {result}.\n-----\n");
-                Console.WriteLine($"Ends at {DateTime.Now}.");
+                Console.WriteLine($"Ends at: {DateTime.Now}.");
+                Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}.");
+
 
             }
         }
