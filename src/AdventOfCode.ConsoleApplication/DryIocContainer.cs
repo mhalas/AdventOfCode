@@ -45,6 +45,7 @@ namespace AdventOfCode.ConsoleApplication
 
             ApplicationContainer.Register<IAdventTask, Tasks.Year2023.Day01_Trebuchet>(serviceKey: "2023-01");
             ApplicationContainer.Register<IAdventTask, Tasks.Year2023.Day02_CubeConundrum>(serviceKey: "2023-02");
+            ApplicationContainer.Register<IAdventTask, Tasks.Year2023.Day03_GearRatios>(serviceKey: "2023-03");
         }
     }
 }
