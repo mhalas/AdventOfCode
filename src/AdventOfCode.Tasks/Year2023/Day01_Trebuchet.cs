@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,17 +89,35 @@ namespace AdventOfCode.Tasks.Year2023
 
             foreach(var pair in _intDict)
             {
-                var index = row.IndexOf(pair.Key);
+                var stringIndexes = GetAllIndexesOfString(row, pair.Key, pair.Value);
 
-                if(index >= 0)
+                foreach (var index in stringIndexes)
                 {
-                    result.Add(index, pair.Value);
+                    if (!result.ContainsKey(index.Key))
+                    {
+                        result.Add(index.Key, index.Value);
+                    }
                 }
             }
 
             return result
                 .OrderBy(x=>x.Key)
                 .ToDictionary(x => x.Key, x => x.Value);
+        }
+
+        private IDictionary<int, int> GetAllIndexesOfString(string row, string key, int number)
+        {
+            var result = new Dictionary<int, int>();
+
+            for (int index = 0; ; index += key.Length)
+            {
+                index = row.IndexOf(key, index);
+                if (index == -1)
+                    return result;
+                result.Add(index, number);
+            }
+
+            return result;
         }
     }
 }

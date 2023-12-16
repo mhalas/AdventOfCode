@@ -53,6 +53,11 @@ namespace AdventOfCode.Tests.Year2023
         [TestCase("34", 34)]
         [TestCase("eightwo", 82)]
         [TestCase("eightwothree", 83)]
+        [TestCase("eighthree", 83)]
+        [TestCase("sevenine", 79)]
+        [TestCase("twone", 21)]
+        [TestCase("7one7", 77)]
+        [TestCase("sevenx1xseven", 77)]
 
         [TestCase("1one", 11)]
         [TestCase("2two", 22)]
